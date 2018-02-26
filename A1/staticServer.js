@@ -18,24 +18,7 @@ app.get("/add", function (req, res) {
 });
 
 app.get("/sub", function (req, res) {
-	var a = parseFloat(req.query.a);
-	var b = parseFloat(req.query.b);
-	var result = a - b;
-    res.send(result.toString());
-});
-
-app.get("/mult", function (req, res) {
-	var a = parseFloat(req.query.a);
-	var b = parseFloat(req.query.b);
-	var result = a * b;
-    res.send(result.toString());
-});
-
-app.get("/div", function (req, res) {
-	var a = parseFloat(req.query.a);
-	var b = parseFloat(req.query.b);
-	var result = a / b;
-    res.send(result.toString());
+    res.send(req.query);
 });
 
 app.use(methodOverride());
